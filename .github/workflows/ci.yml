@@ -35,9 +35,9 @@ jobs:
       # Paso D: Ejecutar las pruebas unitarias
       - name: Ejecutar pruebas unitarias con pytest
         run: |
-          pytest -v
+          pytest src_base/ -v
 
       # Paso E: Validar cobertura mínima del 80%
       - name: Validar umbral de cobertura (>= 80%)
         run: |
-          pytest --cov=src_base --cov-report=term-missing --cov-fail-under=80
+          pytest src_base/ --cov=src_base --cov-report=term-missing --cov-fail-under=80
